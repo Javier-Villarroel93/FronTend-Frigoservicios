@@ -1,0 +1,40 @@
+<div>
+
+<nav class="navbar">
+  <div class="container">
+    
+  </div>
+</nav>
+    <h1 class="titulo1">Al infinito y mas alla</h1>
+  
+    <div class="form-wrapper">
+      <h2>Inicio de Sesion</h2>
+      <form (ngSubmit)="iniciarSesion()">
+        <div class="form-control">
+          <input type="text" [(ngModel)]="correoElectronico" name="correoElectronico" required />
+          <label>Correo Electronico</label>
+        </div>
+        <div class="form-control">
+          <input type="password" [(ngModel)]="password" name="password" required />
+          <label>Password</label>
+        </div>
+        <button type="submit">Sign me In</button>
+        <div class="form-help">
+          <div class="remember-me">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
+          </div>
+          <div class="letras">
+            <a href="http://localhost:4200/auth/register"><h6>Aun no tienes Cuenta?</h6></a>
+            
+          </div>                 
+          
+          
+        
+      </div>
+      </form>
+    </div>
+  </div>
+  
+<router-outlet></router-outlet>
+  

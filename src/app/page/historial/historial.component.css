@@ -1,0 +1,159 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  
+  .container {
+    width: 100%;
+    max-width: 1520px;
+    background: #fff;
+    border: 2px solid #2a7bbd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    height: 750px;
+    margin-top: 70px;
+  }
+  
+  
+  .header {
+    background-color: #155b95;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+
+  .main-section {
+    padding: 20px;
+  }
+  
+ 
+  .table {
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  
+  .row div {
+    border: 1px solid #ccc;
+    padding: 8px;
+    background: #f9f9f9;
+  }
+  
+  .header-row {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+  
+ 
+  .combined-field {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+ 
+  .field, .field1 {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; 
+  }
+  
+  
+  .field1 {
+    margin-left: 10px; 
+   max-width: 300px;
+  }
+  
+  
+  .field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .field1 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  
+  div[id] {
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 60px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      margin: 10px;
+    }
+  
+    .row {
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 0.8rem;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .combined-field {
+      flex-direction: column;
+    }
+  
+    .field, .field1 {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .row {
+      grid-template-columns: 1fr;
+      font-size: 0.7rem;
+    }
+  
+    .field, .field1 {
+      flex: 1 1 100%;
+    }
+  }
+  

@@ -24,11 +24,13 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+                "src/assets"
             ],
             "styles": [
               "src/styles.css"
             ],
+            
             "scripts": []
           },
           "configurations": {
@@ -92,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "043cc78d-fa99-4407-b234-6055f3eed643"
   }
 }

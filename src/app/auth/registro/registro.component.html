@@ -1,0 +1,37 @@
+<div>
+
+      
+    <div class="form-wrapper">
+      <h2>Formulario de Registro</h2>
+      <form (ngSubmit)="crearUsuario()">
+        <div class="form-control">
+          <input type="text" [(ngModel)]="nombreCompleto" name="nombreCompleto" required />
+          <label>Nombre completo</label>
+        </div>
+        <div class="form-control">
+          <input type="email" [(ngModel)]="correoElectronico" name="correoElectronico" required />
+          <label>Correo electronico</label>
+        </div>
+        <div class="form-control">
+          <input type="tel" [(ngModel)]="numeroContacto" name="numeroContacto" required />
+          <label>Numero de contacto</label>
+        </div>
+        <div class="form-control">
+          <input type="password" [(ngModel)]="password" name="password" required />
+          <label>Password</label>
+        </div>
+        <button>Sign Up</button>
+        <div class="form-help">
+          <div class="remember-me">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">
+              By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.
+            </label>
+          </div>
+          <a href="http://localhost:4200/auth/login">Already a member? Click here to login.</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+

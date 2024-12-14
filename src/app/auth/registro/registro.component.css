@@ -1,0 +1,227 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+  
+
+body {
+  background: #003f73;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-position: center;
+}
+
+h1 {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  color: #fff;
+  font-size: 90px;
+}
+
+.comm {
+  position: absolute;
+  top: 470px;
+  left: 40px;
+  color: #fff;
+  font-size: 25px;
+  font-family: "Playwrite CU", cursive;
+}
+
+.autor {
+  position: absolute;
+  top: 540px;
+  left: 540px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Playwrite CU", cursive;
+}
+
+.form-wrapper {
+    position: absolute;
+    left: 50%;  /* Ajusta para centrar horizontalmente */
+    top: 50%;   /* Ajusta para centrar verticalmente */
+    width: 550px;  /* Tamaño más pequeño */
+    height: 700px; /* Tamaño más pequeño */
+    border-radius: 4px;
+    padding: 30px; /* Reducir el padding para el contenido */
+    transform: translate(-50%, -50%); /* Mantener centrado */
+    background: #bebebe;
+  }
+  
+  .form-wrapper h2 {
+    color: #000000;
+    font-size: 1.5rem; /* Tamaño más pequeño */
+    margin-top: 50px; /* Ajusta el margen superior */
+    margin-left: 100px;
+  }
+  
+  .form-wrapper form {
+    margin-top: 200px; /* Ajusta el margen para que todo quede dentro */
+    margin-bottom: 20px;
+  }
+  
+
+.form-control {
+  height: 50px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.form-control input {
+  height: 100%;
+  top: -150px;
+  position: absolute;
+  width: 100%;
+  background: #E0DEDE;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+
+.form-control label {
+  position: absolute;
+  left: 20px;
+  top: -250%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #8c8c8c;
+  transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #FF7A00;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+    position: relative; /* Posición relativa para mover el botón */
+    top: -130px; /* Mueve el botón 50px hacia abajo */
+  }
+  
+  form button:hover {
+    background: #f78821;
+  }
+  
+
+.form-wrapper a {
+  text-decoration: none;
+}
+
+.form-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.form-wrapper :where(label, p, small, a) {
+  color: #b3b3b3;
+}
+
+.form-help {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-me {
+  position: absolute;
+  top: 970px;
+  left: 20px;
+  display: flex;
+}
+
+.remember-me input {
+  margin-right: 5px;
+  accent-color: #b3b3b3;
+}
+
+.form-help :where(label, a) {
+  font-size: 0.9rem;
+}
+
+.form-wrapper small a {
+  color: #0071eb;
+}
+
+@media (max-width: 740px) {
+  body::before {
+    display: none;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    top: 43%;
+  }
+
+  .form-wrapper form {
+    margin: 25px 0 40px;
+  }
+}
+
+form .remember-me input[type="checkbox"] {
+    margin-right: 10px; 
+    accent-color: #FF7A00; 
+    cursor: pointer; 
+    margin-top: -750px;
+  }
+  
+
+  form .remember-me label {
+    color: #333;
+    font-size: 1rem; 
+    position: relative;
+    top: -350px; 
+    line-height: 1.5; 
+    text-align: justify; 
+    display: inline-block;
+    width: 80%; 
+  }
+  
+ 
+  form .remember-me + a {
+    color: #008CBA;
+    text-decoration: none; 
+    font-size: 1rem;
+    margin-top: -220px;
+    display: block; 
+    text-align: center; 
+  }
+  
+ 
+  form .remember-me + a:hover {
+    color: #f78821; 
+    text-decoration: underline; 
+  }
+  
+
+
+

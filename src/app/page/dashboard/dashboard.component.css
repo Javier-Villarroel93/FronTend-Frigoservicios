@@ -1,0 +1,83 @@
+.full-screen-container {
+    height: 100vh; 
+    width: 100vw; 
+}
+  
+/* Contenedor principal (drawer-container) */
+.full-screen-container {
+    display: flex;
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    flex-direction: row;  /* Alinea el contenido y el drawer en fila */
+}
+
+/* Menú lateral (drawer) */
+.nav-drawer {
+    background-color: #ffffff;  /* Fondo blanco */
+    color: #000000;  /* Texto negro */
+    width: 250px;  /* Ancho fijo */
+    height: 100vh;  /* Altura completa del viewport */
+    padding: 20px;  /* Espacio interno */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  /* Sombra para darle profundidad */
+    position: fixed;  /* Fija el drawer en su lugar */
+    top: 0;  /* Pegado a la parte superior */
+    left: 0;  /* Alineado a la izquierda */
+    z-index: 1;  /* Lo coloca debajo del contenido principal */
+    overflow-y: auto;  /* Permite desplazamiento vertical si el contenido es largo */
+    padding-top: 83px; /* Para que no se superponga con el contenido */
+}
+
+/* Contenido principal (mat-drawer-content) */
+mat-drawer-content {
+    flex-grow: 1;  /* Hace que el contenido ocupe el resto del espacio disponible */
+    margin-left: 250px;  /* Deja espacio para el menú lateral */
+    padding: 20px;
+    overflow: auto;
+    height: 100vh;
+    z-index: 2;  /* Lo coloca encima del menú lateral */
+}
+
+/* Enlaces de navegación */
+.nav-drawer a {
+    display: block;  /* Los enlaces ocupan toda una fila */
+    color: #000000;  /* Color de texto negro */
+    text-decoration: none;  /* Elimina el subrayado */
+    margin-bottom: 15px;  /* Espaciado entre los enlaces */
+    padding: 8px 15px;  /* Relleno para los enlaces */
+    border-radius: 4px;  /* Bordes redondeados */
+    transition: background-color 0.3s ease;  /* Suaviza el cambio de color al pasar el cursor */
+}
+
+.nav-drawer a:hover {
+    background-color: #f0f0f0;  /* Color de fondo al pasar el cursor */
+}
+
+/* Pie de página (si lo tienes en tu nav drawer) */
+.nav-drawer .nav-footer {
+    margin-top: auto;  /* Mantiene el pie de página pegado al fondo */
+    font-size: 0.9rem;  /* Tamaño reducido del pie de página */
+    color: #888888;  /* Color gris para el pie de página */
+}
+
+
+
+.derecha {
+    background-color: #f9f9f9; 
+    color: #2c3e50; 
+    padding: 20px;
+}
+  
+.derecha mat-drawer-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+ 
+@media (max-width: 768px) {
+    .nav-drawer {
+        width: 200px; 
+    }
+    .derecha {
+        padding: 10px;
+    }
+}
